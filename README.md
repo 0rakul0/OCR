@@ -16,6 +16,6 @@
 
 # imagens utilizadas 
 
-https://github.com/0rakul0/OCR/blob/main/img/imgem.png
-https://github.com/0rakul0/OCR/blob/main/img/sem_sofrencia.png
+<img src="https://github.com/0rakul0/OCR/blob/main/img/imgem.png" alt="oi mundo" />
+<img src="https://github.com/0rakul0/OCR/blob/main/img/sem_sofrencia.png" alt="promoção do Mequi donalts"/>
 
