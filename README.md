@@ -19,3 +19,9 @@
 <img src="https://github.com/0rakul0/OCR/blob/main/img/imgem.png" alt="oi mundo" />
 <img src="https://github.com/0rakul0/OCR/blob/main/img/sem_sofrencia.png" alt="promoção do Mequi donalts"/>
 
+# para OMR
+ filtros
+- original
+- escala de cinza
+- escala de azul
+- saida em linhas
