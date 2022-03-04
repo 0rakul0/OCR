@@ -5,13 +5,13 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 #caminho da imagem
 imagem = cv2.imread("img/imgem.png")
-imagem_dois = cv2.imread("img/sem_sofrencia.png")
+imagem = cv2.imread("data-captcha/ok/telanova0.png")
 
 #mostrando a imagem
-cv2.imshow("imagem",imagem_dois) #lembrando que o canal está no BGR
+cv2.imshow("imagem", imagem) #lembrando que o canal está no BGR
 
 #comando para conveter o canal para de BGR para RGB
-imagem = cv2.cvtColor(imagem_dois, cv2.COLOR_BGR2RGB)
+imagem = cv2.cvtColor(imagem, cv2.COLOR_BGR2RGB)
 cv2.waitKey(0)
 
 config_tesseract = '--tessdata-dir tessdata'
