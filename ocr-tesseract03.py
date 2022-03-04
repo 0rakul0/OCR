@@ -5,7 +5,6 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 #caminho da imagem
 #imagem = cv2.imread("data-captcha/ok/cap02.png")
-imagem = cv2.imread("data-captcha/ok/telanova0.png")
 
 #mostrando a imagem
 cv2.imshow("imagem", imagem) #lembrando que o canal está no BGR
