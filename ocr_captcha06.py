@@ -1,4 +1,4 @@
-#solucionando cap
+# solucionando cap
 import os
 
 from keras.models import load_model
@@ -8,27 +8,27 @@ import numpy as np
 import cv2
 import pickle
 
-#processos
+# processos
 from ocr_captcha03 import tratar_imagens
 
 
-#passos importar o modelo e importar tradutor
+# passos importar o modelo e importar tradutor
 # modelo treinado
 # rotulos_modelo
 
 def quebra_cap():
-    #tradutor
+    # tradutor
     with open("rotulos_modelo.dat", "rb") as arquivo_tradutor:
         lb = pickle.load(arquivo_tradutor)
 
-    #modelo
+    # modelo
     modelo = load_model("modelo_quebra_cap_treinado.hdf5")
 
     # usando o modelo >> ler todos os arquivos da pasta cap_resolver
     # processo ->> tratar >> identificar >> pegar as letras para o modelo >> transformar em texto
-    #tratar
+    # tratar
     tratar_imagens("data-captcha/cap_resolver/", pasta_destino="data-captcha/cap_resolver/")
-    #identificar
+    # identificar
     arquivos = list(paths.list_images("data-captcha/cap_resolver/"))
     for arquivo in arquivos:
         imagem = cv2.imread(arquivo)
@@ -60,19 +60,18 @@ def quebra_cap():
             # da a letra para o modelo
             imagem_letra = resize_to_fit(imagem_letra, 20, 20)
 
-            #pondo 4 dimensões
+            # pondo 4 dimensões
             imagem_letra = np.expand_dims(imagem_letra, axis=2)
             imagem_letra = np.expand_dims(imagem_letra, axis=0)
 
-            #jogando a letra no modelo
+            # jogando a letra no modelo
             letra_prevista = modelo.predict(imagem_letra)
             letra_prevista = lb.inverse_transform(letra_prevista)[0]
             previsao.append(letra_prevista)
 
-
         texto_previsao = "".join(previsao)
-        print(texto_previsao)
-        #return texto_previsao
+        return texto_previsao
+
 
 if __name__ == "__main__":
     quebra_cap()

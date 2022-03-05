@@ -9,7 +9,7 @@ def tratar_imagens(pasta_origem, pasta_destino="data-captcha/ok"):
     for arquivo in arquivos:
         img = cv2.imread(arquivo)
         img_cinza = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        _, img_tratada = cv2.threshold(img_cinza, 50, 255, cv2.THRESH_TRUNC or cv2.THRESH_OTSU)
+        _, img_tratada = cv2.threshold(img_cinza, 150, 255, cv2.THRESH_TRUNC or cv2.THRESH_OTSU)
         nome_arquivo = os.path.basename(arquivo)
         cv2.imwrite(f'{pasta_destino}/{nome_arquivo}', img_tratada)
 
