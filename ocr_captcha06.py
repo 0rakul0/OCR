@@ -42,7 +42,7 @@ def quebra_cap():
         for contorno in contornos:
             (x, y, w, h) = cv2.boundingRect(contorno)
             area = cv2.contourArea(contorno)
-            if area > 115:
+            if area > 150:
                 area_letras.append((x, y, w, h))
 
         # pondo o texto de saida em ordem

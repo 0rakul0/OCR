@@ -34,3 +34,10 @@
 - escala de cinza
 - escala de azul
 - saida em linhas
+
+# referencias
+https://medium.com/@ageitgey/how-to-break-a-captcha-system-in-15-minutes-with-machine-learning-dbebb035a710
+https://shubhamchauhan125.medium.com/cnncaptchasolver-5625b189a14f
+http://www.begnini.net/2016/02/08/quebrando-outro-captcha-com-opencv-e-python.html
+http://www.begnini.net/2015/12/30/quebrando-captcha-com-opencv-e-python.html
+https://thepythonguru.com/decoding-captchas-using-python/

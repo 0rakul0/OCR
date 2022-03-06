@@ -69,13 +69,13 @@ modelo.add(Flatten())
 modelo.add(Dense(500, activation="relu"))
 
 # camada de saída
-modelo.add(Dense(26, activation="softmax"))
+modelo.add(Dense(33, activation="softmax"))
 
 # compilar todas as camadas
 modelo.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 # treinando a rede
-modelo.fit(x_treino, y_treino, validation_data=(x_teste, y_teste), batch_size=26, epochs=10, verbose=1)
+modelo.fit(x_treino, y_treino, validation_data=(x_teste, y_teste), batch_size=33, epochs=10, verbose=1)
 
 # salvando o modelo
 modelo.save("modelo_quebra_cap_treinado.hdf5")

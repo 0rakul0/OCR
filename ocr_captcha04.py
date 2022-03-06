@@ -16,7 +16,7 @@ for arquivo in arquivos:
     for contorno in contornos:
         (x, y, w, h) = cv2.boundingRect(contorno)
         area = cv2.contourArea(contorno)
-        if area > 50:
+        if area > 115:
             area_letras.append((x, y, w, h))
 
     # limite de letras reconhecidas === 5
