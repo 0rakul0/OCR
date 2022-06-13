@@ -5,7 +5,7 @@ pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesse
 
 #caminho da imagem
 #imagem = cv2.imread("img/imgem.png")
-imagem = cv2.imread("data-captcha/ok/telanova0.png")
+imagem = cv2.imread("img/captcha.png")
 
 #tratando a imagem
 imagem = cv2.cvtColor(imagem, cv2.COLOR_BGR2RGB)

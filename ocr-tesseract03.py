@@ -4,7 +4,7 @@ import cv2
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
 
 #caminho da imagem
-#imagem = cv2.imread("data-captcha/ok/cap02.png")
+imagem = cv2.imread("img/captcha.png")
 
 #mostrando a imagem
 cv2.imshow("imagem", imagem) #lembrando que o canal está no BGR
